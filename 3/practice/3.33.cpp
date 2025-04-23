@@ -16,9 +16,9 @@ int main(){
 	int h;
 	{
 		int q = day;
-		int m = month;
-		int j = year / 100;
-		int k = year % 100;
+        int m = ((month == 1 || month == 2) ? month + 12 : month);
+		int j = (month <= 2 ? year-1 : year) / 100;
+		int k = (month <= 2 ? year-1 : year) % 100;
 		h = (q +(26 *(m + 1)/10)+ k + k / 4 + j / 4 + 5 * j)% 7;
 	}
 
