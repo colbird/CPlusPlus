@@ -1,3 +1,4 @@
 # 编译后的程序
 test
 a.out
+*.h.gch
